@@ -1,0 +1,51 @@
+﻿@model FiveSessionWebMvcApp.Models.Portfolios
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/ManagementPanel/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Portfolios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PortfolioCategories.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PortfolioCategories.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PortfolioDetails.SubTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PortfolioDetails.SubTitle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PortfolioId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

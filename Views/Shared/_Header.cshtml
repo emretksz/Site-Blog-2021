@@ -1,0 +1,24 @@
+﻿<header id="header" class="fixed-top @(ViewBag.Title=="Index"?"header-transparent":"")">
+    <div class="container">
+
+        <div class="logo float-left">
+            <h1 class="text-light"><a href="@Url.Action("Index","Home")"><span>@(ViewContext.RouteData.Values["action"].ToString()=="Index"? "5.Seans":"4.Seans")</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="~/Content/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav class="nav-menu float-right d-none d-lg-block">
+            <ul>
+                <li class="@(ViewContext.RouteData.Values["action"].ToString()=="Index"?"active":"")"><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+                @*<li>@Html.ActionLink("Anasayfa","Index","Home")</li>*@
+                <li class="@(ViewContext.RouteData.Values["action"].ToString()=="About"?"active":"")"><a href="@Url.Action("About","Home")">Hakkımızda</a></li>
+                <li class="@(ViewContext.RouteData.Values["action"].ToString()=="Service"?"active":"")"><a href="@Url.Action("Service","Home")">Servislerimiz</a></li>
+                <li class="@(ViewContext.RouteData.Values["action"].ToString()=="Portfolio"?"active":"")"><a href="@Url.Action("Portfolio","Home")">Portfolio</a></li>
+                <li class="@(ViewContext.RouteData.Values["action"].ToString()=="Team"?"active":"")"><a href="@Url.Action("Team","Home")">Takım</a></li>
+                <li class="@(ViewContext.RouteData.Values["action"].ToString()=="Blog"?"active":"")"><a href="@Url.Action("Blog","Home")">Blog</a></li>
+                <li class="@(ViewContext.RouteData.Values["action"].ToString()=="Contact"?"active":"")"><a href="@Url.Action("Contact","Home")">İletişim</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header>

@@ -1,0 +1,58 @@
+﻿@model FiveSessionWebMvcApp.Models.Portfolios
+@{
+    ViewBag.Title = "PortfolioDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ======= Our Portfolio Section ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Portfolio Details</h2>
+            <ol>
+                <li><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+                <li><a href="@Url.Action("Portfolio","Home")">Portfolio</a></li>
+                <li>@Model.Name</li>
+            </ol>
+        </div>
+
+    </div>
+</section><!-- End Our Portfolio Section -->
+<!-- ======= Portfolio Details Section ======= -->
+<section class="portfolio-details">
+    <div class="container">
+
+        <div class="portfolio-details-container">
+
+            <div class="owl-carousel portfolio-details-carousel">
+                @foreach (var img in Model.PortfolioDetails.PortfolioDetailImages)
+                {
+
+                    <img src="@img.ImageURL" class="img-fluid" alt="">
+                }
+                @*<img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">*@
+            </div>
+
+            <div class="portfolio-info">
+                <h3>Proje Hakkında</h3>
+                <ul>
+                    <li><strong>Kategori</strong>: @Model.PortfolioCategories.Name</li>
+                    <li><strong>İstemci</strong>: @Model.PortfolioDetails.Client</li>
+                    <li><strong>Proje Tarihi</strong>: @Model.PortfolioDetails.ProjectDate.Value.ToString("dd MMMM, yyyy")</li>
+                    <li><strong>Proje URL</strong>: <a href="https://www.pikselakademi.com.tr">Piksel Akademi</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="portfolio-description">
+            <h2>@Model.PortfolioDetails.SubTitle</h2>
+            <p>
+               @Model.PortfolioDetails.Description
+            </p>
+        </div>
+    </div>
+</section><!-- End Portfolio Details Section -->

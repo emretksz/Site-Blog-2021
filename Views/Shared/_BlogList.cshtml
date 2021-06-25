@@ -1,0 +1,54 @@
+﻿@model List<FiveSessionWebMvcApp.Models.Blogs>
+@foreach (var blog in Model)
+{
+    <article class="entry">
+
+        <div class="entry-img">
+            <img src="@blog.ImageURL" alt="" class="img-fluid">
+        </div>
+
+        <h2 class="entry-title">
+            <a href="@Url.Action("BlogDetails","Home",new {id=blog.BlogId })">
+                @blog.Title
+            </a>
+        </h2>
+
+        <div class="entry-meta">
+            <ul>
+                <li class="d-flex align-items-center">
+                    <i class="icofont-user"></i> <a href="@Url.Action("BlogDetails","Home",new {id=blog.BlogId })">
+                        @blog.Author
+                    </a>
+                </li>
+                <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="@Url.Action("BlogDetails","Home",new {id=blog.BlogId })"><time datetime="@blog.BlogDate.Value.ToString("yyyy-MM-dd")">@blog.BlogDate.Value.ToString("MMM dd, yyyy")</time></a></li>
+                <li class="d-flex align-items-center">
+                    <i class="icofont-comment"></i> <a href="@Url.Action("BlogDetails","Home",new {id=blog.BlogId })">
+                        @blog.Comments.Count
+                        Comments
+                    </a>
+                </li>
+                <li>
+                    <i class="far fa-heart change-heart" style="cursor:pointer"></i> Beğen(<i class="change-heart-number">0</i>)
+                </li>
+            </ul>
+        </div>
+
+        <div class="entry-content">
+            @blog.SubDescription
+            <div class="read-more">
+                <a href="@Url.Action("BlogDetails","Home",new {id=blog.BlogId })">Read More</a>
+            </div>
+        </div>
+
+    </article>
+}
+
+<div class="blog-pagination">
+    <ul class="justify-content-center">
+        <li class="disabled"><i class="icofont-rounded-left"></i></li>
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+    </ul>
+</div>

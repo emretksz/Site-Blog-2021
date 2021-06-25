@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad28142145334c2ab7d8cb3a7806b632" Name="Diagram1">
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Abouts" Width="1.5" PointX="14" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.BlogDetails" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Blogs" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Categories" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Comments" Width="1.5" PointX="7.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.ContactMessages" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Features" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.ServiceBoxes" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.ServiceCards" Width="1.5" PointX="9.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Services" Width="1.5" PointX="12" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Skills" Width="1.5" PointX="11.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Sliders" Width="1.5" PointX="7.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Tags" Width="1.5" PointX="9.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Teams" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Tetstimonials" Width="1.5" PointX="11.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.UserDetails" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Users" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_Abouts_Skills" ManuallyRouted="false" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_Abouts_Tetstimonials" ManuallyRouted="false" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_BlogDetails_Blogs" ManuallyRouted="false" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_Blogs_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_Blogs_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_Comments_Blogs" ManuallyRouted="false" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_Services_ServiceBoxes" ManuallyRouted="false" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_Services_ServiceCards" ManuallyRouted="false" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_UserDetails_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.BlogToTags" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Roles" Width="1.5" PointX="0.75" PointY="4.75" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_Users_Roles" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.PortfolioCategories" Width="1.5" PointX="12.375" PointY="1.375" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.PortfolioDetailImages" Width="1.5" PointX="19.125" PointY="1.25" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.PortfolioDetails" Width="1.5" PointX="16.875" PointY="1" />
+        <EntityTypeShape EntityType="FS_Blog_2021_DbModel.Portfolios" Width="1.5" PointX="14.625" PointY="1.25" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_Portfolios_PortfolioCategories" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_PortfolioDetailImages_PortfolioDetails" />
+        <AssociationConnector Association="FS_Blog_2021_DbModel.FK_PortfolioDetails_Portfolios" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

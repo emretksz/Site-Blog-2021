@@ -1,0 +1,91 @@
+﻿@model FiveSessionWebMvcApp.Models.Users
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/ManagementPanel/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Users</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            ********
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserDetails.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserDetails.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserDetails.FacebookURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserDetails.FacebookURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserDetails.InstagramURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserDetails.InstagramURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserDetails.TwitterURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserDetails.TwitterURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserDetails.RegisterDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserDetails.RegisterDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserDetails.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserDetails.IsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Roles.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Roles.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
